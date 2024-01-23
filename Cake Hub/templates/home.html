@@ -1,0 +1,161 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Cake Hub</title>
+  </head>
+  <body>
+    {% block content %}
+    {% if request.user.is_authenticated %}
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a  class="nav-head me-auto"  href="#">Cake Hub</a>
+     
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h6 class="offcanvas-title" id="offcanvasNavbarLabel">Cake Hub</h6>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="{% url 'App:home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  mx-lg-2" href="{% url 'App:about' %}">About</a>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="{% url 'App:contact' %}">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="{% url 'App:view_cart' %}">Cart</a>
+              </li>
+          
+          </ul>
+          
+          
+        </div>
+      </div>
+      <a href="{% url 'App:logout' %}" class="login-btn">Logout</a>
+      <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+  {% endif %}
+  <section class="page2">
+    <h1 class="pg-txt">HAPPINESS </h1>
+    <h2>
+      <span class="pg-txt1" style="color:brown;background-color:white;">BEGINS</span>
+      <span class="pg-txt2">HERE</span>
+    </h2>
+  </section>
+<div class="container" style="background-color: white;">
+  <div class="container">
+  <div class="row mt-2">
+    <h1 class='text1'>Best Sellers</h1>
+    {% for product in products %}
+      {% if item.is_sale %}
+      <div class="col-md-4" >
+        
+          <div class="card" style="width: 18rem;">
+              <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+              <div class="card-body">
+                <h4 class="card-title">{{ product.name }}</h4>
+                <p style='text-align:center;'><span ><strike >${{ product.price }}</strike></span><span >&nbsp;&nbsp;${{ product.sale_price }}</span></p>
+                <button><a href="{% url 'App:add_to_cart' product.id %}" >Add to Cart</a></button>
+              </div>
+            </div>
+      </div>
+      {% else %}
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;margin-top:20%;">
+            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+            <div class="card-body">
+              <h4 class="card-title">{{ product.name }}</h4>
+              <p style='text-align:center;'><span style="color:white;"><strike>${{ product.price }}</strike></span><span style="color:white;font-weight:700;">&nbsp;&nbsp;${{ product.sale_price }}</span></p>
+              <button><a href="{% url 'App:add_to_cart' product.id %}" >Add to Cart</a></button>
+            
+            
+            </div>
+          </div>
+    </div>
+      {% endif %}
+      {% endfor %}
+  </div>
+ </div>
+</div>
+  <div class="container-fluid rw1">
+   <div class="container mt-5">
+    <div  class="row">
+      <h4 class='text2'>Why Choose Cake Hub?</h4>
+      <h5 style="text-align:start;margin-top:3%;color:black;line-height:1.4;" >From our robust packaging to our ever expanding range, here at Sponge we do everything 
+        we can to ensure we are providing great quality products and services, so you don't have to worry! All you have to do is order your cakes and bakes online through our website and we will do the rest. <h5>
+        <div class="row">
+        <div class="col-lg-3 mt-5">
+          <img src="{% static 'images/i1.svg' %}">
+          <p style="text-align:center;font-size:15px;margin-top:5%;color:black"><b>Next day delivery as standard</b></p>
+        </div>
+        <div class="col-lg-3 mt-5">
+          <img src="{% static 'images/i2.svg' %}">
+          <p style="text-align:center;font-size:15px;margin-top:5%;color:black"><b>World wide delivery for all our cakes</b></p>
+        </div>
+        <div class="col-lg-3 mt-5">
+          <img src="{% static 'images/i3.svg' %}">
+          <p style="text-align:center;font-size:15px;margin-top:5%;color:black"><b>Protective packaging for safe delivery</b></p>
+        </div>
+        <div class="col-lg-3 mt-5">
+          <img src="{% static 'images/i4.svg' %}">
+          <p style="text-align:center;font-size:15px;margin-top:5%;color:black"><b>Gluten Free and Vegan options</b></p>
+        </div>
+       
+       </div>
+    </div>
+  
+   </div>
+</div>
+<div class="container-fluid">
+  <div class="container">
+    <div class="row mt-5">
+      <h1 class="hd1">Cake hub's delicious team masters</h1>
+      <div class="col-lg-4 mt-5">
+        <img class="pic" src="{% static 'images/photo1.jpg' %}" style="width:100%;height:100vh;">
+        <h4 style="text-align:center;font-weight:600;color:brown;margin-top:3%;">Beatrice Lavigne Chef</h4>
+    </div>
+    <div class="col-lg-4 mt-5">
+      <img class="pic"  src="{% static 'images/photo2.jpg' %}" style="width:100%;height:100vh;" >
+      <h4 style="text-align:center;font-weight:600;color:brown;margin-top:3%;">Kurt Barton Chef</h4>
+  </div>
+  <div class="col-lg-4 mt-5">
+    <img class="pic"  src="{% static 'images/photo3.jpg' %}"  style="width:100%;height:100vh;">
+    <h4 style="text-align:center;font-weight:600;color:brown;margin-top:3%;">Ellen Miller Chef</h4>
+  </div>
+    </div>
+  </div>
+</div>
+  <div class="container-fluid " style="background-color:white;">
+   <div class="container">
+    <div class="row">
+      <h1 style="text-align:center;margin-top:4%;color:brown;font-weight:600;font-size:50px">More Information</h1>
+      <div class="col-lg bg1">
+    <p style="color:black;margin-top:3%;font-size:18px;font-weight:500;text-align:justify;">We hand-make our Cakes and Brownies in our bakery in Holt, Norfolk, and offer cake delivery and brownie delivery anywhere in the UK, offering next day delivery as standard. So, when you're looking for cake stores 'near me', think of Sponge. We make our cakes with a lot of care and love in our bakery, using quality and local ingredients to ensure the highest standard of products
+       for all of our customers and we are always adding new flavours and ranges. We use robust packaging to ensure that your Sponges arrive at your door safely and undamaged, so there's nothing to worry about when ordering cake online! <br>So, whether you are looking to book a cake near you, or looking for quick cake delivery to your loved one, you can be confident that Sponge can deliver your cakes. </p>
+    <h6 style="text-align:left;color:brown;margin-top:2%;font-weight:700;">~Cakes Hub,the Online Cake Company</h6>  
+  </div>  
+  </div>
+   </div>
+  </div>
+  <hr style='color:#000;margin-top:3%;'>
+    <p style='text-align:center;color:#;'>Copyright @ 2024 <span style='color:brown;'>Cake Hub</span> | All Rights Reserved</p>
+  
+{% endblock  %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>

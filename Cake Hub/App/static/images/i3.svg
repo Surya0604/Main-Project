@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:serif="http://www.serif.com/" width="100%" height="100%" viewBox="0 0 165 165" version="1.1" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-31.5,-30.7)">
+        <circle cx="113.8" cy="113" r="73.8" style="fill:white;"></circle>
+    </g>
+    <g transform="matrix(1,0,0,1,-31.5,-30.7)">
+        <path d="M164.3,80.1L111.2,55.7L59.9,80.1L60.1,136.6L112.1,161L164,136.6L164.3,80.1Z" style="fill:rgb(146,134,191);fill-rule:nonzero;"></path>
+    </g>
+    <g transform="matrix(1,0,0,1,-31.5,-30.7)">
+        <path d="M131.4,64L78.3,88.6L78.3,106.9L92.4,113.3L92.2,94.9L145.5,70.3" style="fill:white;fill-rule:nonzero;"></path>
+    </g>
+    <g transform="matrix(1,0,0,1,-31.5,-30.7)">
+        <path d="M114.9,59.4L62.4,84.3L62.6,142.4L115.9,167.3L169.1,142.4L169.3,84.3L114.9,59.4ZM115.8,107.8L98.9,100L148,77.3L165.8,85.5L115.8,107.8ZM94.8,116.4L83.3,111.2L83.3,95.6L94.7,100.8L94.8,116.4ZM85.1,93.6L134.1,70.9L145,75.9L95.9,98.6L85.1,93.6ZM114.9,62.2L131,69.6L82,92.3L66.5,85.2L114.9,62.2ZM64.9,87.1L80.9,94.5L80.9,112.9L97.4,120.4L97.2,102L114.6,110L114.6,164.1L65.1,140.9L64.9,87.1ZM117.1,164.1L117.1,110L166.7,87.9L166.5,140.9L117.1,164.1Z" style="fill:rgb(16,54,69);fill-rule:nonzero;"></path>
+        <g transform="matrix(0.4159,-0.9094,0.9094,0.4159,-70.8035,177.331)">
+            <rect x="101.4" y="135.9" width="2.5" height="15.7" style="fill:rgb(16,54,69);"></rect>
+        </g>
+        <g transform="matrix(0.4159,-0.9094,0.9094,0.4159,-76.7567,181.162)">
+            <rect x="101.4" y="142.5" width="2.5" height="15.7" style="fill:rgb(16,54,69);"></rect>
+        </g>
+    </g>
+</svg>

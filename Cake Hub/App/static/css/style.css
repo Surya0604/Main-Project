@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x:hidden;
+}
+.body{
+    height: 108vh;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.t3 {
+    text-align: start;
+   
+    margin: 16px 0;
+
+    font-size: 16px;
+    }
+.t1 {
+    text-align: center;
+    font-weight: 900;
+
+    font-size: clamp(50px, 7.5vw + 10px, 100px);
+    }
+.t2 {
+    text-align: center;
+    
+    }
+.text1{
+    color:brown;
+    text-align: center;
+    padding-top: 5%;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.login-btn{
+    background-color:brown;
+    color: white;
+    font-weight: bolder;
+    font-size: 14px;
+    padding: 8px 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 20px;
+}
+.login-btn:hover{
+    background-color:rgba(0,0,0,0.7);
+    color: white;
+    font-weight: bolder;
+
+}
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+
+}
+.navbar-toggler:focus, .btn-close:focus{
+    box-shadow: none;
+    outline: none;
+
+}
+.nav-item .nav-link{
+    color: brown;
+    font-weight: 900;
+    position: relative;
+    font-size: 20px;
+}
+.nav-item .nav-link:hover{
+    color:#ffff;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 20px;
+}
+
+.navbar{
+background-color:rgba(0,0,0,0.4),rgba(0,0,0,0.4);
+height: 80px;
+margin: 20px;
+border-radius: 15px;
+padding: 0.5rem;
+
+}
+section::before{
+   
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-head{
+    font-size: 40px;
+    color:brown;
+    text-decoration: none;
+    font-weight: 900;
+    
+}
+.nav-head:hover{
+    color: white;
+}
+.offcanvas-title{
+    color: rgba(108, 21, 21, 0.472);
+    font-weight: 900;
+}
+.carousel-inner{
+    margin-top: 10%;
+    border-radius: 25px;
+    
+}
+
+
+.page2{
+    height: 700px;
+    width: 100%;
+    background: url("/static/images/cake.jpg")  top right no-repeat;
+   
+}
+
+h6{
+    text-align: center;
+}
+.card-body{
+    background-color:rgb(62, 62, 62);
+
+}
+
+.card{
+    margin-left: 10%;
+    box-shadow: 5px 5px 10px #555;
+    
+}
+
+.card-text{
+    text-align: center;
+    font-size: larger;
+    color: white;
+}
+.card-title{
+    text-align:center;
+    
+    font-weight: 900;
+    color: white;
+}
+button{
+    align-items: center;
+    background-color: brown;
+    padding: 5px 5px 5px 5px;
+    font-size: 20px;
+    border: 1px solid white;
+    position: absolute;
+    left: 72px;
+
+}
+button a{
+    text-decoration: none;
+    color: #ffff;
+    font-weight: bold;
+    font-size: 22px;
+    
+}
+button a:hover{
+    color:black;
+}
+.text2{
+    font-size: 50px ;
+    text-align: center;
+    
+    text-align:center;
+    color: white;
+    padding-top: 6%;
+    font-weight: 600;
+}
+
+.rw1{
+    background-color: #b69090;
+    margin-top: 9%;
+}
+.pg-txt{
+    color: #ffff;
+    text-align: left;
+    padding-top: 15%;
+    font-size: 115px;
+    text-align: start;
+    font-weight: 750;
+    
+}
+.pg-txt1{
+    color: #ffff;
+    font-size: 115px;
+    text-align: start;
+    font-weight: 750;
+}
+
+.pg-txt2{
+    color: #ffff;
+    margin-left: 1%;
+   font-size: 115px;
+   font-weight: 750;
+}  
+@media(max-width:786px){
+    .page2 h1{
+        font-size: 90px;
+    }
+    .page2 .pg-txt1{
+        font-size: 90px;
+    }
+}
+.body-text{
+    color: #FFFF;
+}
+.hd1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    color: brown;
+}
+
+
